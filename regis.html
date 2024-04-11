@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form</title>
+    </head>
+    <body>
+        <div class="regisform" style="text-align: center; background-color: #445e6b; padding: 20px;">
+            <h1 style="color: rgb(132, 132, 137);">Registration Form</h1>
+            <form action="#" methods="post">
+                <p style="font-weight: bold;">Name:</p>
+                <input type="text" name="name" placeholder="Name" style="width: 200px; padding: 5px; margin-bottom: 10px;">
+                <p style="font-weight: bold;">Email:</p>
+                <input type="email" name="email" placeholder="Email" style="width: 200px; padding: 5px; margin-bottom: 10px;">
+                <p style="font-weight: bold;">Password:</p>
+                <input type="password" name="password" placeholder="Password" style="width: 200px; padding: 5px; margin-bottom: 10px;"><br>
+                <p style="font-weight: bold;">Contact:</p>
+                <input type="number" name="contact" placeholder="Contact No." style="width: 200px; padding: 5px; margin-bottom: 10px;"><br>
+                <p style="font-weight: bold;">Gender:</p>
+                <input type="text" name="gender" style="width: 200px; padding: 5px; margin-bottom: 10px;"><br>
+                <button type="submit" style="background-color: rgb(124, 124, 132); color: white; padding: 10px 20px; border: none; cursor: pointer;">SUBMIT</button>
+
+            </form>
+        </div>
+        <script>
+            function validateForm() {
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+                var contact = document.getElementById('contact').value;
+                var gender = document.querySelector('input[name="gender"]:checked');
+    
+                if (name === "" || email === "" || password === "" || contact === "" || gender === null) {
+                    alert("Please fill in all fields.");
+                    return false;
+                }
+                else{
+                    alert("successfully submitted");
+                }
+                document.getElementById('regisform').submit();
+            }
+        </script>
+    </body>
+</html>
